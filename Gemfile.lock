@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: 5169f7b03761b927ffa2bea39cd14b55c6bb0ca5
+  branch: master
+  specs:
+    faker (2.18.0)
+      i18n (>= 1.6, < 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -69,6 +77,11 @@ GEM
     crass (1.0.6)
     diff-lcs (1.4.4)
     erubi (1.10.0)
+    factory_bot (6.2.0)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
     ffi (1.15.3)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -159,6 +172,8 @@ GEM
       sprockets-rails
       tilt
     semantic_range (3.0.0)
+    shoulda-matchers (5.0.0)
+      activesupport (>= 5.2.0)
     spring (2.1.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -195,6 +210,8 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
+  factory_bot_rails
+  faker!
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
@@ -202,6 +219,7 @@ DEPENDENCIES
   rails (~> 6.1.4)
   rspec-rails (~> 5.0.0)
   sass-rails (>= 6)
+  shoulda-matchers (~> 5.0)
   spring
   turbolinks (~> 5)
   tzinfo-data
