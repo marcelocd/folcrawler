@@ -12,6 +12,7 @@ gem 'rails', '~> 6.1.4'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
+gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
