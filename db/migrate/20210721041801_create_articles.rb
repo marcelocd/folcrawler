@@ -4,7 +4,7 @@ class CreateArticles < ActiveRecord::Migration[6.1]
       t.string :source
       t.string :title
       t.string :url
-      t.string :published_at
+      t.datetime :published_at
       t.datetime :collected_at
       t.text :body
 

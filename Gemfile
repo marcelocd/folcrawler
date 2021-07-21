@@ -6,6 +6,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git',
              branch: 'master'
 gem 'jbuilder', '~> 2.7'
+gem 'mechanize', '~> 2.7', '>= 2.7.5'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.4'

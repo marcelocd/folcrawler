@@ -8,7 +8,6 @@ RSpec.describe Article, type: :model do
   it { should validate_presence_of(:url) }
   it { should validate_presence_of(:published_at) }
   it { should validate_presence_of(:collected_at) }
-  it { should validate_presence_of(:body) }
 
   it 'has valid factory' do
     expect(article).to be_valid

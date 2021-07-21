@@ -1,7 +1,6 @@
 require_relative "boot"
 
 require "rails"
-# Pick the frameworks you want:
 require "active_model/railtie"
 require "active_job/railtie"
 require "active_record/railtie"
@@ -34,5 +33,7 @@ module Folcrawler
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.time_zone = 'Brasilia'
+    config.active_record.default_timezone = :local
   end
 end

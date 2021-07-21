@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_07_21_041801) do
     t.string "source"
     t.string "title"
     t.string "url"
-    t.string "published_at"
+    t.datetime "published_at"
     t.datetime "collected_at"
     t.text "body"
     t.datetime "created_at", precision: 6, null: false

@@ -3,6 +3,7 @@ class Article < ApplicationRecord
                         :title,
                         :url,
                         :published_at,
-                        :collected_at,
-                        :body
+                        :collected_at
+
+  scope :published_last, -> { where(published_at: self.maximum('published_at')) }
 end
