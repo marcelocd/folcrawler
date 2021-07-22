@@ -1,7 +1,7 @@
 class CultureArticleParser
   def parse_article_params
     {
-      source: 'Culture',
+      source: 'culture',
       title: title,
       url: url,
       body: body,
@@ -12,18 +12,22 @@ class CultureArticleParser
 
   private
 
-  attr_reader :article
+  attr_reader :article, :ag
 
   def initialize args
+    log ''
     @article = args[:article]
+    @ag = Mechanize.new
   end
 
   def title
+    log 'title'
     article.css('header > span.summary > a')
            .inner_text
   end
 
   def url
+    log 'url'
     article.css('header > span.summary > a')
            .first
            .attributes['href']
@@ -31,48 +35,69 @@ class CultureArticleParser
   end
 
   def body
-    article.css('p')
-           .try(:text)
+    log 'body'
+    article_page.css('#parent-fieldname-text')
+                .inner_text
+                .strip
+  end
+
+  def article_page
+    log 'article page'
+    @article_page ||= Nokogiri::HTML(ag.get(url).body)
   end
 
   def datetime
+    log 'DateTime'
     DateTime.new(year, month, day, hour, minute, 0)
   end
 
   def year
+    log 'year'
     @year ||= date_string.match(/\d{4}$/)[0]
                          .to_i
   end
 
   def month
+    log 'mont'
     @month = date_string.match(/\/(\d{1,2})\//)[1]
                         .to_i
   end
 
   def day
+    log 'day'
     @day ||= date_string.match(/^\d{1,2}/)[0]
                         .to_i
   end
 
   def hour
+    log 'hour'
     @hour ||= time_string.match(/^\d{1,2}/)[0]
                          .to_i
   end
 
   def minute
+    log 'minute'
     @minute ||= time_string.match(/\d{1,2}$/)[0]
                            .to_i
   end
 
   def date_string
-    @date_string ||= article.css('header > span.documentByLine')
-                            .inner_text
-                            .match(/(\d{1,2}\/){2}\d{4}/)[0]
+    byebug if article_page.css('.documentPublished').nil?
+    @date_string ||= article_page.css('.documentPublished')
+                                 .text
+                                 .match(/(\d{1,2}\/){2}\d{4}/)[0]
   end
 
   def time_string
-    @time_string ||= article.css('header > span.documentByLine')
-                            .inner_text
-                            .match(/\d{1,2}h\d{1,2}/)[0]
+    log 'timestring'
+    @time_string ||= article_page.css('.documentPublished')
+                                 .text
+                                 .match(/\d{1,2}h\d{1,2}/)[0]
+  end
+
+  def log message
+    puts '-' * 99
+    puts message
+    puts '-' * 99
   end
 end
