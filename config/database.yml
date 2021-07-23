@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: folcrawler_development
+test:
+  <<: *default
+  database: folcrawler_test
+production:
+  <<: *default
+  database: folcrawler_production
+  username: folcrawler
+  password: <%= ENV['FOLCRAWLER_DATABASE_PASSWORD'] %>
