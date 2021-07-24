@@ -215,3 +215,10 @@ en:
   language: Language
   english: English
   portuguese: Portuguese
+  articles:
+    index:
+      title: Title
+      body: Body
+      source: Source
+      published_at: Published at
+      modified_at: Modified at

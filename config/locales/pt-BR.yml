@@ -223,3 +223,10 @@ pt-BR:
   language: Idioma
   english: Inglês
   portuguese: Português
+  articles:
+    index:
+      title: Título
+      body: Corpo
+      source: Fonte
+      published_at: Publicado em
+      modified_at: Modificado em
