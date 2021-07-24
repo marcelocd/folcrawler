@@ -1,7 +1,13 @@
 namespace :crawlers do
   task scrape_culture_articles: :environment do
     new_articles = Crawlers::Culture.call
-    new_articles.each(&:save) if new_articles.any?
+
+    print_report(new_articles)
+    print_dismissal
+  end
+
+  task scrape_social_development_articles: :environment do
+    new_articles = Crawlers::SocialDevelopment.call
 
     print_report(new_articles)
     print_dismissal
