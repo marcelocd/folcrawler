@@ -95,12 +95,12 @@ module Crawlers
     end
 
     def find_previous_page_url page
-      next_button_element = page.css('.anterior')
-      return unless next_button_element.any?
+      previous_button_element = page.css('.anterior')
+      return unless previous_button_element.any?
 
-      next_button_element.last
-                         .attributes['href']
-                         .text
+      previous_button_element.last
+                             .attributes['href']
+                             .text
     end
   end
 end
