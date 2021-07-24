@@ -1,4 +1,6 @@
 class Article < ApplicationRecord
+  include Hashid::Rails
+
   SOURCE_OPTIONS = %i[culture social_development]
 
   enum source: SOURCE_OPTIONS
