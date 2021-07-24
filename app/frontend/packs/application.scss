@@ -1,1 +1,68 @@
-@import "~bootstrap/scss/bootstrap";  
+@import "~bootstrap/scss/bootstrap";
+
+.navbar {
+  background-color: black !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#home-container {
+  margin-top: 25px;
+}
+
+#home-jumbotron {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 425px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+.page-item {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.page-item.active > span {
+  color: #20AF6D !important;
+  border-color: #20AF6D !important;
+  background-color: whitesmoke !important;
+}
+
+.page-link{
+  color: gray !important;
+  border-color: gray !important;
+  transition: transform .2s;
+  background-color: lightgray !important;
+}
+
+.page-link:hover {
+  color: gray !important;
+  border-color: gray !important;
+  background-color: whitesmoke !important;
+  transform: scale(1.1);
+}

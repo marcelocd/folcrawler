@@ -4,7 +4,6 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.order(collected_at: :desc)
                        .page(params[:page])
-											 .per_page(15)
   end
 
   def show

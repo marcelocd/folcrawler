@@ -1,0 +1,16 @@
+<div class="container card-box">
+  <div class="table-responsive">
+    <table class="table">
+      <tr>
+        <th>#</th>
+        <th><%= t('.title') %></th>
+        <th><%= t('.body') %></th>
+        <th><%= t('.source') %></th>
+        <th><%= t('.published_at') %></th>
+        <th><%= t('.modified_at') %></th>
+        <th></th>
+      </tr>
+      <%= render @articles %>
+    </table>
+  </div>
+</div>
