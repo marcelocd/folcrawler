@@ -1,8 +1,16 @@
 class Article < ApplicationRecord
+  SOURCE_OPTIONS = %i[culture social_development]
+
+  enum source: SOURCE_OPTIONS
+
   validates_presence_of :source,
                         :title,
                         :url,
                         :collected_at
 
-  scope :published_last, -> { where(published_at: self.maximum('published_at')) }
+  def self.most_recent_article source
+    self.where(source: source.to_sym)
+        .order(:created_at)
+        .last
+  end
 end
