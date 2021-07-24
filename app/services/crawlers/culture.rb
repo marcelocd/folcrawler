@@ -3,7 +3,7 @@ module Crawlers
     include PrinterHelper
 
     def call
-      get_articles.reverse
+      get_articles.reverse.each(&:save)
     rescue StandardError => error
       error.message
     end
@@ -67,7 +67,8 @@ module Crawlers
     end
 
     def initial_page_url
-      "https:\/\/www\.gov\.br\/turismo\/pt-br/secretaria-especial-da-cultura\/assuntos\/noticias"
+      "https:\/\/www\.gov\.br\/turismo\/pt-br\/"\
+      "secretaria-especial-da-cultura\/assuntos\/noticias"
     end
 
     def last_page_url page

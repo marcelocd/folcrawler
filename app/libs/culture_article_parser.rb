@@ -78,10 +78,4 @@ class CultureArticleParser
 
     time_element.text.match(/\d{1,2}h\d{1,2}/)[0]
   end
-
-  def log message
-    puts '-' * 99
-    puts message
-    puts '-' * 99
-  end
 end
