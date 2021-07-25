@@ -10,7 +10,7 @@
 
 #logo {
   float: left;
-  font-size: 1.7em;
+  font-size: 1.9em;
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -81,6 +81,10 @@ body {
   background-color: #F7A341;
 }
 
+#language-options-button:focus {
+  box-shadow: 0 1px 1px #F7A341 inset, 0 0 8px white;
+}
+
 .table-striped > tbody > tr:nth-of-type(odd){
   background-color: rgb(248 137 6 / 22%) !important;
 }
@@ -107,4 +111,19 @@ body {
 .form-select:focus {
   border-color: #F7A341 !important;
   box-shadow: 0 1px 1px #F7A341 inset, 0 0 8px #F7A341;
+}
+
+.standard-button{
+  background-color: #F88906 !important;
+  border-color: #F88906 !important;
+}
+
+.standard-button:hover{
+  background-color: #F7A341 !important;
+  border-color: #F7A341 !important;
+}
+
+.standard-button:focus {
+  border-color: #F7A341 !important;
+  box-shadow: none !important;
 }
