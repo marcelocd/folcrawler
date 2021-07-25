@@ -7,14 +7,16 @@ gem 'faker', git: 'https://github.com/faker-ruby/faker.git',
              branch: 'master'
 gem "hashid-rails", "~> 1.0"
 gem 'jbuilder', '~> 2.7'
+gem 'kaminari', '~> 1.0', '>= 1.0.1'
+gem 'kaminari-actionview'
 gem 'mechanize', '~> 2.7', '>= 2.7.5'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.4'
+gem 'ransack'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
-gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
