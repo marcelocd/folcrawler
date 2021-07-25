@@ -20,8 +20,9 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def destroy
-    @article.destroy
+  def scrape_articles
+    CrawlerWorker.perform_async
+    flash[:notice] = t('scraping_articles')
     redirect_to articles_path
   end
 
