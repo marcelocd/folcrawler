@@ -16,6 +16,13 @@ pt-BR:
   articles:
     index:
       title: Artigos
+  tags:
+    index:
+      title: Tags
+    new:
+      title: Criar tag
+    create:
+      success: Tag criada com sucesso!
   date:
     abbr_day_names:
     - dom
@@ -249,3 +256,12 @@ pt-BR:
   view_all_articles: Ver todos os artigos
   view_tags: Ver tags
   create_a_new_tag: Criar uma nova tag
+  created_at: Criado em
+  updated_at: Atualizado em
+  action: Ação
+  name: Nome
+  enter_a_tag_name: Digite um nome de tag
+  the_following_errors_prevented: "Os seguintes erros não permitiram salvar o(a) %{model_name}"
+  new_tag: Nova tag
+  delete: Deletar
+  confirm_tag_deletion: Tem certeza que deseja deletar esta tag?

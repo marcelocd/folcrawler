@@ -24,16 +24,16 @@
           <%= t('article').pluralize %>
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarArticlesDropdown">
-          <% Article.sources.keys.each do |source| %>
-            <%= link_to t(source),
-                        articles_path(q: { source_eq: source }),
-                        class: 'dropdown-item' %>
-          <% end %>
           <li>
             <%= link_to t('view_all_articles'),
                         articles_path,
                         class: 'dropdown-item' %>
           </li>
+          <% Article.sources.each do |source| %>
+            <%= link_to t(source.first),
+                        articles_path(q: { source_eq: source.last }),
+                        class: 'dropdown-item' %>
+          <% end %>
         </ul>
       </li>
       <li class="nav-item dropdown">
@@ -49,12 +49,12 @@
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li>
             <%= link_to t('view_tags'),
-                        '#',
+                        tags_path,
                         class: 'dropdown-item' %>
           </li>
           <li>
             <%= link_to t('create_a_new_tag'),
-                         '#',
+                         new_tag_path,
                          class: 'dropdown-item' %>
           </li>
         </ul>

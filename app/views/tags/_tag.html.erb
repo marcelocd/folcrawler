@@ -1,0 +1,17 @@
+<tr>
+  <td><%= tag.hashid %></td>
+  <td><%= tag.name %></td>
+  <td><%= l(tag.created_at, format: :short) %></td>
+  <td><%= l(tag.updated_at, format: :short) if tag.updated_at %></td>
+  <td>
+    <%= link_to tag_path(tag),
+                method: :delete,
+                style: 'color: black;',
+                'data-bs-toggle': 'tooltip',
+                'data-bs-placement': 'bottom',
+                'title': t('delete'),
+                data: { confirm: t('confirm_tag_deletion') } do %>
+      <i class="far fa-trash-alt"></i>
+    <% end %>
+  </td>
+</tr>

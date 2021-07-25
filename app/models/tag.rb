@@ -1,4 +1,6 @@
 class Tag < ApplicationRecord
+  include Hashid::Rails
+  
   validates :name, presence: true,
                    length: { maximum: 20 }
 

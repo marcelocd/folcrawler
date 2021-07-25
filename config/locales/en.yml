@@ -16,6 +16,13 @@ en:
   articles:
     index:
       title: Articles
+  tags:
+    index:
+      title: Tags
+    new:
+      title: Create tag
+    create:
+      success: Tag created successfully!
   date:
     abbr_day_names:
     - Sun
@@ -241,3 +248,12 @@ en:
   view_all_articles: View all articles
   view_tags: View tags
   create_a_new_tag: Create a new tag
+  created_at: Created at
+  updated_at: Updated at
+  action: Action
+  name: Name
+  enter_a_tag_name: Enter a tag name
+  the_following_errors_prevented: "The following errors prevented the %{model_name} from being saved"
+  new_tag: New tag
+  delete: Delete
+  confirm_tag_deletion: Are you sure you want to delete this tag?

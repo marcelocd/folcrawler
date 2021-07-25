@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get "welcome/index"
 
   resources :articles, only: %i[index show destroy]
+  resources :tags, only: %i[index new create destroy]
 end

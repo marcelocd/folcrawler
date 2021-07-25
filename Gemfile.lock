@@ -97,6 +97,9 @@ GEM
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
     ffi (1.15.3)
+    font_awesome5_rails (1.5.0)
+      nokogiri (>= 1.11.3)
+      railties (>= 4.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     hashid-rails (1.4.1)
@@ -268,6 +271,7 @@ DEPENDENCIES
   byebug
   factory_bot_rails
   faker!
+  font_awesome5_rails
   hashid-rails (~> 1.0)
   jbuilder (~> 2.7)
   kaminari (~> 1.0, >= 1.0.1)
