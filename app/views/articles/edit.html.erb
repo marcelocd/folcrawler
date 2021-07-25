@@ -11,11 +11,11 @@
       <div class="row">
         <%= link_to @article.title,
                     @article.url,
-                    href: '_blank' %>
+                    target: '_blank' %>
       </div>
       <div class="row">
         <p>
-          <%= t('article_body') %>:&nbsp;<%= truncate(@article.body, length: 570) %>
+          <%= truncate(@article.body, length: 570) %>
         </p>
       </div>
     </div>

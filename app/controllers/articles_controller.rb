@@ -37,6 +37,6 @@ class ArticlesController < ApplicationController
   end
 
   def search_params
-    params.permit(:commit, q: [:title_cont, :source_eq]).to_h
+    params.permit(:commit, q: [:title_cont, :source_eq, :tag_id_eq]).to_h
   end
 end

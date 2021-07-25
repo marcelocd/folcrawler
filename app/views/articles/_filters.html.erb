@@ -6,11 +6,20 @@
           <%= f.label t('title') %>
           <%= f.search_field :title_cont, class: 'form-control input-sm' %>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-4">
           <%= f.label t('source') %>
           <div class="dropdown">
             <%= f.select :source_eq,
                          source_select_options,
+                         { include_blank: t('all') },
+                         { class: 'form-select input-sm dropdown-toggle' } %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <%= f.label t('tag').pluralize %>
+          <div class="dropdown">
+            <%= f.select :tag_id_eq,
+                         tag_select_options,
                          { include_blank: t('all') },
                          { class: 'form-select input-sm dropdown-toggle' } %>
           </div>
