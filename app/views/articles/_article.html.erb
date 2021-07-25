@@ -17,10 +17,10 @@
   </td>
   <td><%= t(article.source) %></td>
   <td><%= l(article.published_at, format: :short) if article.published_at %></td>
-  <td><%= l(article.modified_at, format: :short) if article.modified_at %></td>
+  <td><%= l(article.collected_at, format: :short) %></td>
   <td>
     <%= link_to edit_article_path(article),
-                style: 'color: black;',
+                style: 'color: #0B58CA;',
                 'data-bs-toggle': 'tooltip',
                 'data-bs-placement': 'bottom',
                 'title': t('manage_tags') do %>
