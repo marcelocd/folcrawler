@@ -1,0 +1,26 @@
+<div class="row my-auto">
+  <div class="col-8">
+    <h2 class="page-title">
+      <%= t('.title') %>
+    </h2>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-center mt-2">
+    <div class="col-10">
+      <div class="row">
+        <%= link_to @article.title,
+                    @article.url,
+                    href: '_blank' %>
+      </div>
+      <div class="row">
+        <p>
+          <%= t('article_body') %>:&nbsp;<%= truncate(@article.body, length: 570) %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mt-2 mb-4">
+  <%= render 'form' %>
+</div>

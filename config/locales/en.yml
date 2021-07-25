@@ -1,5 +1,8 @@
 en:
   activerecord:
+    models:
+      article: Article
+      tag: Tag
     errors:
       messages:
         record_invalid: 'Validation failed: %{errors}'
@@ -16,6 +19,10 @@ en:
   articles:
     index:
       title: Articles
+    edit:
+      title: Edit article
+    update:
+      success: Article updated successfully!
   tags:
     index:
       title: Tags
@@ -257,3 +264,7 @@ en:
   new_tag: New tag
   delete: Delete
   confirm_tag_deletion: Are you sure you want to delete this tag?
+  manage_tags: Manage tags
+  select_the_desired_tags: Select the desired tags
+  article_title: Article title
+  article_body: Article body

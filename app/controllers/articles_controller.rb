@@ -1,15 +1,23 @@
 class ArticlesController < ApplicationController
-  before_action :find_article, only: %i[show destroy]
+  before_action :find_article, only: %i[edit update destroy]
 
   def index
-    # byebug
     @q = Article.ransack(search_params[:q])
     @articles = @q.result
                   .order(updated_at: :desc)
                   .page(params[:page])
   end
 
-  def show
+  def edit
+  end
+
+  def update
+    if @article.update(article_params)
+      flash[:notice] = t('.success')
+      redirect_to articles_path
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -19,8 +27,13 @@ class ArticlesController < ApplicationController
 
   private
 
+  def article_params
+    params.require(:article)
+          .permit(tag_ids: [])
+  end
+
   def find_article
-    @article = Article.find_by(id: params[:id])
+    @article = Article.find(params[:id])
   end
 
   def search_params

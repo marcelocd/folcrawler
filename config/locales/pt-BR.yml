@@ -1,5 +1,8 @@
 pt-BR:
   activerecord:
+    models:
+      article: Artigo
+      tag: Tag
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
@@ -16,6 +19,10 @@ pt-BR:
   articles:
     index:
       title: Artigos
+    edit:
+      title: Editar artigo
+    update:
+      success: Artigo atualizado com sucesso!
   tags:
     index:
       title: Tags
@@ -265,3 +272,7 @@ pt-BR:
   new_tag: Nova tag
   delete: Deletar
   confirm_tag_deletion: Tem certeza que deseja deletar esta tag?
+  manage_tags: Gerenciar tags
+  select_the_desired_tags: Selecione as tags desejadas
+  article_title: Título do artigo
+  article_body: Corpo do artigo
