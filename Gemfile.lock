@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/activerecord-hackery/ransack.git
+  revision: 16ce9110cbaee6682aca6e06ccb9d66a0c7a46c3
+  specs:
+    ransack (2.4.2)
+      activerecord (>= 5.2.4)
+      activesupport (>= 5.2.4)
+      i18n
+
+GIT
   remote: https://github.com/faker-ruby/faker.git
   revision: 5169f7b03761b927ffa2bea39cd14b55c6bb0ca5
   branch: master
@@ -182,10 +191,6 @@ GEM
       rake (>= 0.13)
       thor (~> 1.0)
     rake (13.0.6)
-    ransack (2.4.2)
-      activerecord (>= 5.2.4)
-      activesupport (>= 5.2.4)
-      i18n
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -272,7 +277,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 6.1.4)
-  ransack
+  ransack!
   rspec-rails (~> 5.0.0)
   sass-rails (>= 6)
   shoulda-matchers (~> 5.0)
@@ -286,4 +291,4 @@ RUBY VERSION
    ruby 3.0.0p0
 
 BUNDLED WITH
-   2.2.15
+   2.2.3

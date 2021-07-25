@@ -1,5 +1,5 @@
 module ArticlesHelper
   def source_select_options
-    Article.sources.keys.map{ |source| [t(source), source] }
+    Article.sources.map{ |source| [t(source.first), source.last] }
   end
 end

@@ -12,6 +12,54 @@
             aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+           href="#"
+           id="navbarArticlesDropdown"
+           role="button"
+           data-bs-toggle="dropdown"
+           aria-expanded="false"
+           data-bs-auto-close="outside">
+          <%= t('article').pluralize %>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarArticlesDropdown">
+          <% Article.sources.keys.each do |source| %>
+            <%= link_to t(source),
+                        articles_path(q: { source_eq: source }),
+                        class: 'dropdown-item' %>
+          <% end %>
+          <li>
+            <%= link_to t('view_all_articles'),
+                        articles_path,
+                        class: 'dropdown-item' %>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+           href="#"
+           id="navbarDropdown"
+           role="button"
+           data-bs-toggle="dropdown"
+           aria-expanded="false"
+           data-bs-auto-close="outside">
+          <%= t('tag').pluralize %>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li>
+            <%= link_to t('view_tags'),
+                        '#',
+                        class: 'dropdown-item' %>
+          </li>
+          <li>
+            <%= link_to t('create_a_new_tag'),
+                         '#',
+                         class: 'dropdown-item' %>
+          </li>
+        </ul>
+      </li>
+    </ul>
     <div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-end">
       <div class="dropdown navbar-nav mb-2 mb-lg-0" style="text-align: right;">
         <button id="language-options-button"

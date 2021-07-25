@@ -244,3 +244,8 @@ pt-BR:
   search: Filtrar
   all: Todos
   filter: Filtro
+  tag: Tag
+  article: Artigo
+  view_all_articles: Ver todos os artigos
+  view_tags: Ver tags
+  create_a_new_tag: Criar uma nova tag

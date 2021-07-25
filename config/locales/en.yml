@@ -236,3 +236,8 @@ en:
   search: Search
   all: All
   filter: Filter
+  tag: Tag
+  article: Article
+  view_all_articles: View all articles
+  view_tags: View tags
+  create_a_new_tag: Create a new tag

@@ -2,7 +2,8 @@ class ArticlesController < ApplicationController
   before_action :find_article, only: %i[show destroy]
 
   def index
-    @q = Article.ransack(params[:q])
+    # byebug
+    @q = Article.ransack(search_params[:q])
     @articles = @q.result
                   .order(updated_at: :desc)
                   .page(params[:page])
@@ -20,5 +21,9 @@ class ArticlesController < ApplicationController
 
   def find_article
     @article = Article.find_by(id: params[:id])
+  end
+
+  def search_params
+    params.permit(:commit, q: [:title_cont, :source_eq]).to_h
   end
 end
