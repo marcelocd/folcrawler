@@ -6,6 +6,16 @@ en:
         restrict_dependent_destroy:
           has_one: Cannot delete record because a dependent %{record} exists
           has_many: Cannot delete record because dependent %{record} exist
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev."
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
+  articles:
+    index:
+      title: Articles
   date:
     abbr_day_names:
     - Sun
@@ -215,10 +225,13 @@ en:
   language: Language
   english: English
   portuguese: Portuguese
-  articles:
-    index:
-      title: Title
-      body: Body
-      source: Source
-      published_at: Published at
-      modified_at: Modified at
+  culture: Culture
+  social_development: Social Development
+  title: Title
+  body: Body
+  source: Source
+  published_at: Published at
+  modified_at: Modified at
+  quantity: Quantity
+  search: Search
+  all: All

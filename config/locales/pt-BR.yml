@@ -6,6 +6,16 @@ pt-BR:
         restrict_dependent_destroy:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
           has_many: Não é possível excluir o registro pois existem %{record} dependentes
+  views:
+    pagination:
+      first: "&laquo; Prim."
+      last: "Última &raquo;"
+      previous: "&lsaquo; Anter."
+      next: "Próx. &rsaquo;"
+      truncate: "&hellip;"
+  articles:
+    index:
+      title: Artigos
   date:
     abbr_day_names:
     - dom
@@ -223,10 +233,13 @@ pt-BR:
   language: Idioma
   english: Inglês
   portuguese: Português
-  articles:
-    index:
-      title: Título
-      body: Corpo
-      source: Fonte
-      published_at: Publicado em
-      modified_at: Modificado em
+  culture: Cultura
+  social_development: Desenvolvimento Social
+  title: Título
+  body: Corpo
+  source: Fonte
+  published_at: Publicado em
+  modified_at: Modificado em
+  quantity: Quantidade
+  search: Filtrar
+  all: Todos

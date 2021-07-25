@@ -2,8 +2,10 @@ class ArticlesController < ApplicationController
   before_action :find_article, only: %i[show destroy]
 
   def index
-    @articles = Article.order(collected_at: :desc)
-                       .page(params[:page])
+    @q = Article.ransack(params[:q])
+    @articles = @q.result
+                  .order(updated_at: :desc)
+                  .page(params[:page])
   end
 
   def show

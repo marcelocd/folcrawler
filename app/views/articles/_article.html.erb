@@ -5,17 +5,17 @@
                 article.url,
                 'data-bs-toggle': 'tooltip',
                 'data-bs-placement': 'bottom',
-                'title': article.title %>
+                'title': article.title,
+                target: '_blank' %>
   </td>
   <td style="cursor: alias;">
     <span data-bs-toggle="tooltip"
           data-bs-placement="bottom"
           title="<%= article.body %>">
-      <%= truncate(article.body, length: 20) %>
+      <%= truncate(article.body, length: 30) %>
     </span>
   </td>
   <td><%= t(article.source) %></td>
   <td><%= l(article.published_at, format: :short) if article.published_at %></td>
   <td><%= l(article.modified_at, format: :short) if article.modified_at %></td>
-  <td></td>
 </tr>
