@@ -25,15 +25,15 @@ $ cd folcrawler
 ```
 Create a new gemset for the application:
 ```
-rvm gemset create folcrawler
+$ rvm gemset create folcrawler
 ```
-Switch to the required ruby version with the new created gemset:
+Switch to the required ruby version among with the new created gemset:
 ```
 $ rvm 3@folcrawler
 $ rvm current
 ```
 
-Then install the needed gems (while skipping any gems needed only in production):
+Then, install the gems (while skipping any gems needed only in production):
 
 ```
 $ bundle install --without production
@@ -64,10 +64,10 @@ $ rails s
 ```
 ## Crawlers
 ### Running them mannually
-To run the crawlers manually, you will need to open three  terminal tabs: one to run redis, another one to run sidekiq, and one to run the tasks.
-(*Don't forget to run `rvm 3@folcrawler` in each terminal first!*)
+To run the crawlers manually, you will need to open three terminal tabs from the project repository: one to run redis, another one to run sidekiq, and one to run the tasks.
+(*Don't forget to run `rvm 3@folcrawler` on each terminal before anything!*)
 
-Terminal A:
+On terminal A:
 ```
 $ redis-server
 ```
