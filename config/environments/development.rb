@@ -1,6 +1,10 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  config.web_console.whitelisted_ips = '172.18.0.1'
+  config.active_job.queue_adapter = :sidekiq
+
+
   config.cache_classes = false
   config.eager_load = false
   config.consider_all_requests_local = true
