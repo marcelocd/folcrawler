@@ -64,7 +64,7 @@ $ rails s
 ```
 ## Crawlers
 ### Running them mannually
-To run the crawlers manually, you will need to open three terminal tabs from the project repository: one to run redis, another one to run sidekiq, and one to run the tasks.
+To run the crawlers manually, you will need to open three terminal tabs from the project directory: one for redis, another one for sidekiq, and one to run the tasks.
 (*Don't forget to run `rvm 3@folcrawler` on each terminal before anything!*)
 
 On terminal A:
@@ -79,15 +79,15 @@ $ sidekiq
 On the third terminal, you may choose from three options:
 1) Run a crawler just for the Culture website:
 ```
-rake crawlers:scrape_culture_articles
+$ rake crawlers:scrape_culture_articles
 ```
 2) Run a crawler just for the Social Development website:
 ```
-rake crawlers:scrape_social_development_articles
+$ rake crawlers:scrape_social_development_articles
 ```
 3) Run both crawlers:
 ```
-rake crawlers:scrape_articles
+$ rake crawlers:scrape_articles
 ```
 ## License
 
